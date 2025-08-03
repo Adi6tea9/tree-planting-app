@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 TreePlant - Growing a Greener Future Together</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating leaves background animation -->
+    <div class="floating-leaves" id="floatingLeaves">
+        <div class="leaf">🍃</div>
+        <div class="leaf">🍂</div>
+        <div class="leaf">🍁</div>
+        <div class="leaf">🌿</div>
+    </div>
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <i class="fas fa-tree"></i>
+                    <span class="logo-text">Tree<span class="logo-accent">Plant</span></span>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#plant" class="nav-link"><i class="fas fa-seedling"></i> Plant</a></li>
+                <li><a href="#leaderboard" class="nav-link"><i class="fas fa-trophy"></i> Leaderboard</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><button class="nav-auth-btn" id="authBtn"><i class="fas fa-sign-in-alt"></i> Sign In</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Plant Trees, Change the World</h2>
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"The best time to plant a tree was 20 years ago. The second best time is now."</p>
+                        <span class="quote-author">- Chinese Proverb</span>
+                    </div>
+                    <p>Join millions of eco-warriors in our mission to create a greener, healthier planet for future generations.</p>
+                    <button class="btn btn-primary" id="startPlanting">Start Your Journey</button>
+                </div>
+                <div class="hero-image">
+                    <div class="tree-animation">🌳</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Tree Counter -->
+        <section id="global-stats" class="section bg-stats">
+            <div class="container">
+                <div class="global-counter">
+                    <h2>Trees Planted Globally</h2>
+                    <div class="counter-display">
+                        <div class="counter-number" id="globalTreeCount">1,234,567</div>
+                        <div class="counter-icon">🌲</div>
+                    </div>
+                    <p class="counter-subtitle">And counting... Join us in making a difference!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Our Mission</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-icon">🌍</div>
+                        <h3>Global Impact</h3>
+                        <p>Every tree planted contributes to a healthier planet and cleaner air for future generations.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌱</div>
+                        <h3>Easy Planting</h3>
+                        <p>Simple interface to track and plan your tree planting activities with friends and community.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📊</div>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your environmental impact with detailed statistics and achievements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plant" class="section bg-light">
+            <div class="container">
+                <h2>Plant a Tree</h2>
+                <div class="plant-form">
+                    <form id="plantingForm">
+                        <div class="form-group">
+                            <label for="treeType">Tree Type</label>
+                            <select id="treeType" required>
+                                <option value="">Select a tree type</option>
+                                <option value="oak">Oak</option>
+                                <option value="pine">Pine</option>
+                                <option value="maple">Maple</option>
+                                <option value="birch">Birch</option>
+                                <option value="cedar">Cedar</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" placeholder="Enter planting location" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Planting Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Plant Tree 🌱</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section id="leaderboard" class="section">
+            <div class="container">
+                <h2>Top Tree Planters</h2>
+                <div class="leaderboard-container">
+                    <div class="leaderboard-header">
+                        <span class="rank-col">Rank</span>
+                        <span class="user-col">User</span>
+                        <span class="trees-col">Trees Planted</span>
+                        <span class="badge-col">Badge</span>
+                    </div>
+                    <div class="leaderboard-entries">
+                        <div class="leaderboard-entry rank-1">
+                            <span class="rank">🥇</span>
+                            <div class="user-info">
+                                <div class="avatar">👩‍🌾</div>
+                                <span class="username">EcoWarrior123</span>
+                            </div>
+                            <span class="tree-count">2,847</span>
+                            <span class="badge">🏆 Champion</span>
+                        </div>
+                        <div class="leaderboard-entry rank-2">
+                            <span class="rank">🥈</span>
+                            <div class="user-info">
+                                <div class="avatar">👨‍🌾</div>
+                                <span class="username">GreenThumb99</span>
+                            </div>
+                            <span class="tree-count">2,156</span>
+                            <span class="badge">🌟 Expert</span>
+                        </div>
+                        <div class="leaderboard-entry rank-3">
+                            <span class="rank">🥉</span>
+                            <div class="user-info">
+                                <div class="avatar">👩‍💼</div>
+                                <span class="username">TreeLover42</span>
+                            </div>
+                            <span class="tree-count">1,893</span>
+                            <span class="badge">🌿 Guardian</span>
+                        </div>
+                        <div class="leaderboard-entry">
+                            <span class="rank">4</span>
+                            <div class="user-info">
+                                <div class="avatar">👨‍💻</div>
+                                <span class="username">EcoFriendly2024</span>
+                            </div>
+                            <span class="tree-count">1,642</span>
+                            <span class="badge">🌱 Starter</span>
+                        </div>
+                        <div class="leaderboard-entry">
+                            <span class="rank">5</span>
+                            <div class="user-info">
+                                <div class="avatar">👩‍🎓</div>
+                                <span class="username">NatureLover88</span>
+                            </div>
+                            <span class="tree-count">1,425</span>
+                            <span class="badge">🌱 Starter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="section bg-light">
+            <div class="container">
+                <h2>Your Impact Dashboard</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🌳</div>
+                        <div class="stat-number" id="treesPlanted">0</div>
+                        <div class="stat-label">Trees Planted</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">☁️</div>
+                        <div class="stat-number" id="co2Saved">0</div>
+                        <div class="stat-label">CO² Saved (kg)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💮</div>
+                        <div class="stat-number" id="oxygenProduced">0</div>
+                        <div class="stat-label">O² Produced (kg)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-number" id="impactScore">0</div>
+                        <div class="stat-label">Impact Score</div>
+                    </div>
+                </div>
+                <div class="planted-trees" id="plantedTreesList">
+                    <h3>Your Tree Planting Journey</h3>
+                    <div id="treesList" class="trees-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Join Our Community</h3>
+                        <p>Connect with fellow tree planters and environmental enthusiasts from around the world.</p>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            <span>info@treeplant.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fab fa-twitter"></i></span>
+                            <span>@TreePlantApp</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon"><i class="fab fa-instagram"></i></span>
+                            <span>@treeplant_official</span>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-tree"></i>
+                        <span class="logo-text">Tree<span class="logo-accent">Plant</span></span>
+                    </div>
+                    <p>Growing a greener future, one tree at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#plant">Plant Tree</a></li>
+                        <li><a href="#leaderboard">Leaderboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TreePlant App. Making the world greener, one tree at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="signin">Sign In</button>
+                    <button class="auth-tab" data-tab="signup">Sign Up</button>
+                </div>
+                
+                <div id="signin-form" class="auth-form active">
+                    <h2>Welcome Back!</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="signin-email">Email</label>
+                            <input type="email" id="signin-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signin-password">Password</label>
+                            <input type="password" id="signin-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary auth-btn">Sign In</button>
+                    </form>
+                    <p class="auth-link">Don't have an account? <span class="switch-auth" data-tab="signup">Sign up here</span></p>
+                </div>
+                
+                <div id="signup-form" class="auth-form">
+                    <h2>Join TreePlant!</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary auth-btn">Sign Up</button>
+                    </form>
+                    <p class="auth-link">Already have an account? <span class="switch-auth" data-tab="signin">Sign in here</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
