@@ -1,7 +1,14 @@
 import React from 'react';
 import { Trees, Leaf, Zap, Heart } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleDonateClick = () => {
+    navigate('/donation');
+  };
+
   return (
     <section className="hero">
       <div className="hero-container">
@@ -17,9 +24,9 @@ const Hero: React.FC = () => {
               every action counts.
             </p>
             <div className="hero-actions">
-              <button className="primary-button">
+              <button className="primary-button" onClick={handleDonateClick}>
                 <Trees className="button-icon" />
-                Plant Your First Tree
+                🌳 Plant a Tree - ₹10
               </button>
               <button className="secondary-button">
                 Learn More

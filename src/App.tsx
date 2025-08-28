@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ImpactCounters from './components/ImpactCounters';
-import AIPlantTips from './components/AIPlantTips';
 import Leaderboard from './components/Leaderboard';
 import Community from './components/Community';
 import NurseryLocator from './components/NurseryLocator';
+import Donation from './components/Donation';
 import Footer from './components/Footer';
+import PlantAnalyzer from './components/PlantAnalyzer';
 import './App.css';
 
 function App() {
@@ -20,14 +21,14 @@ function App() {
             <>
               <Hero />
               <ImpactCounters />
-              <AIPlantTips />
               <Community />
             </>
           } />
+          <Route path="/donation" element={<Donation />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/community" element={<Community />} />
-          <Route path="/ai-tips" element={<AIPlantTips />} />
           <Route path="/nursery-locator" element={<NurseryLocator />} />
+          <Route path="/plant-health" element={<PlantAnalyzer />} />
         </Routes>
         <Footer />
       </div>

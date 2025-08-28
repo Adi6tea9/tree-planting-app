@@ -1,3 +1,485 @@
+/* Modern Donation Component Styles */
+.donation-hero {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
+  padding: 6rem 0 4rem 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.donation-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.donation-header h1 {
+  color: #2d7d32;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.donation-header p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.donation-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Impact Info Styles */
+.donation-info {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.donation-info h3 {
+  color: #2d7d32;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.impact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.impact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #f1f8e9;
+  transition: transform 0.3s ease;
+}
+
+.impact-item:hover {
+  transform: translateY(-2px);
+}
+
+.impact-icon {
+  width: 2rem;
+  height: 2rem;
+  color: #4caf50;
+  flex-shrink: 0;
+}
+
+.impact-item h4 {
+  color: #2d7d32;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.impact-item p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Donation Form Styles */
+.donation-form-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.donation-form {
+  padding: 2rem;
+}
+
+.donation-form h3 {
+  color: #2d7d32;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.amount-section {
+  background: #f1f8e9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.amount-section label {
+  display: block;
+  color: #2d7d32;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.tree-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.qty-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover {
+  background: #45a049;
+  transform: scale(1.1);
+}
+
+.tree-count {
+  width: 80px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: white;
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  color: #2d7d32;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #2d7d32;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-group input.error {
+  border-color: #f44336;
+}
+
+.error-text {
+  color: #f44336;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Payment Methods */
+.payment-methods {
+  margin-bottom: 2rem;
+}
+
+.payment-methods h4 {
+  color: #2d7d32;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  gap: 0.8rem;
+}
+
+.payment-option:hover {
+  border-color: #4caf50;
+  background-color: #f1f8e9;
+}
+
+.payment-option.active {
+  border-color: #4caf50;
+  background-color: #f1f8e9;
+}
+
+.payment-option span {
+  font-weight: 500;
+}
+
+.payment-option.active span {
+  color: #2d7d32;
+  font-weight: 600;
+}
+
+/* Donate Button */
+.donate-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.donate-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #45a049, #4caf50);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.donate-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success Animation */
+.donation-success {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+}
+
+.success-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: slideIn 0.5s ease;
+}
+
+.success-animation {
+  margin-bottom: 2rem;
+}
+
+.success-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #4caf50;
+  margin-bottom: 1rem;
+  animation: bounce 0.6s ease;
+}
+
+.success-tree {
+  width: 3rem;
+  height: 3rem;
+  color: #2d7d32;
+  animation: bounce 0.6s ease 0.2s both;
+}
+
+.success-content h2 {
+  color: #2d7d32;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.success-content p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.celebration-emojis {
+  margin-top: 2rem;
+}
+
+.celebration-emoji {
+  display: inline-block;
+  font-size: 2rem;
+  animation: celebrate 3s ease-out forwards;
+  margin: 0 0.5rem;
+}
+
+.celebration-emoji.emoji-0 { animation-delay: 0s; }
+.celebration-emoji.emoji-1 { animation-delay: 0.2s; }
+.celebration-emoji.emoji-2 { animation-delay: 0.4s; }
+.celebration-emoji.emoji-3 { animation-delay: 0.6s; }
+.celebration-emoji.emoji-4 { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes celebrate {
+  0% { 
+    transform: translateY(0) rotate(0deg) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg) scale(1.2);
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(-60px) rotate(360deg) scale(0.8);
+    opacity: 0.7;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .donation-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .donation-header h1 {
+    font-size: 2rem;
+  }
+  
+  .tree-selector {
+    gap: 0.5rem;
+  }
+  
+  .tree-count {
+    width: 60px;
+  }
+  
+  .success-content {
+    padding: 2rem;
+  }
+  
+  .success-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .donation-section {
+    padding: 2rem 0;
+  }
+  
+  .donation-header {
+    padding: 1.5rem;
+  }
+  
+  .donation-info,
+  .donation-form {
+    padding: 1.5rem;
+  }
+  
+  .celebration-emoji {
+    font-size: 1.5rem;
+    margin: 0 0.25rem;
+  }
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
